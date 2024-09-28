@@ -11,7 +11,7 @@
 Las promesas tienen estados
 
 -Pending => indica que dicha promesa aun esta pendiente de resolucion
--Resolved => la promesa fue rusuelta
+-Resolved => la promesa fue resuelta
 -Rejected => la promesa fue rechazada o hubo un fallo al resolverse
 */
 
@@ -22,8 +22,8 @@ Las promesas tienen estados
     const respuesta = await fetch('https://swapi.dev/api/people/1', {
         method: 'GET'
     })
-    const data = await respuesta.json()
-    return data
+    const data = await respuesta.json()//ACA GUARDAMOS LA RESPUESTA DEL SERVIDOR, CON .JSON() LO CONVERTIMOS A UN OBJETO
+    return data                        //  COMO ES ASINCRONICO EL JSON, DEBEMOS PONERLE EL AWAIT PARA Q NO NOS DEVUELVA UNA PROMESE
 } */
 
 /* const obtenerPagina = async () => {
@@ -56,7 +56,7 @@ fetch('https://swapi.dev/api/people/1', {
     method: 'GET'
 }) */
 
-/* POST /api/products  le voy a enviar un objeto*/
+/* POST /api/products  le voy a enviar un objeto a nuestra propia API */
 
 
 
@@ -75,7 +75,7 @@ const usuarios = [
     {
         nombre: 'Jose',
         edad: 56
-    },
+    }
 
 ]
 console.log(usuarios)
